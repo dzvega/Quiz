@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <div id="home-screen" class="screen active">
+            <div class="header-icon">🧠</div>
+            <h1>QUIZ APP</h1>
+            <div class="button-group">
+                <button onclick="startQuiz()" class="btn-primary">CONTINUE QUIZ</button>
+                <label for="pdf-upload" class="btn-secondary">
+                    UPLOAD PDF
+                    <input type="file" id="pdf-upload" accept=".pdf" hidden>
+                </label>
+            </div>
+            <button class="btn-outline">RULES</button>
+        </div>
+
+        <div id="quiz-screen" class="screen">
+            <div class="header-icon-small">🧠</div>
+            <h2 id="question-number">1. MULTIPLE CHOICE</h2>
+            <div class="question-box">
+                <p id="question-text">Question text goes here?</p>
+            </div>
+            <div id="options-container" class="options-list">
+                </div>
+            <button onclick="nextQuestion()" id="next-btn" class="btn-primary" style="margin-top: 20px;">NEXT</button>
+        </div>
+
+        <div id="result-screen" class="screen">
+            <div class="header-icon">🧠</div>
+            <h1>QUIZ COMPLETED!</h1>
+            <h2 id="feedback">OUTSTANDING!!</h2>
+            <div class="score-badge">
+                <span id="final-score">0</span>
+            </div>
+            <div class="result-actions">
+                <button onclick="resetQuiz()" class="btn-primary">RETRY</button>
+                <button onclick="goHome()" class="btn-secondary">HOME</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
