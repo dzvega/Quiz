@@ -1,0 +1,69 @@
+:root {
+    --bg-color: #b3b7e8;
+    --card-color: #c5cae9;
+    --primary-blue: #7986ff;
+    --dark-text: #4a4a4a;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.app-container {
+    background-color: var(--card-color);
+    width: 350px;
+    height: 600px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.screen { display: none; flex-direction: column; height: 100%; }
+.screen.active { display: flex; }
+
+.header-icon { font-size: 60px; margin-top: 40px; }
+h1 { color: #5c67a3; font-size: 1.5rem; margin-bottom: 50px; }
+
+.button-group { display: flex; flex-direction: column; gap: 15px; margin-bottom: 40px; }
+
+.btn-primary, .btn-secondary, .btn-outline {
+    padding: 15px;
+    border-radius: 30px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary { background-color: var(--primary-blue); color: white; }
+.btn-secondary { background-color: #9ea7f5; color: white; }
+.btn-outline { background-color: transparent; border: 2px solid var(--primary-blue); color: var(--primary-blue); }
+
+/* Quiz Styles */
+.question-box {
+    background: var(--primary-blue);
+    color: white;
+    padding: 20px;
+    border-radius: 25px;
+    margin: 20px 0;
+}
+
+.option-item {
+    background: white;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.option-item:hover { background: #f0f0f0; }
+.option-item.selected { background: var(--primary-blue); color: white; }
